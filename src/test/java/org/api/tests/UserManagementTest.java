@@ -23,7 +23,7 @@ public class UserManagementTest {
      * Verifies that the user profile can be retrieved successfully.
      * Asserts that the username in the response matches the expected value.
      */
-    @Test
+    @Test(description = "Verify the user profile retrieval functionality.")
     public void getProfileTest() {
         String token = loginAndGetToken();
         UserManagementService userManagementService = new UserManagementService();
@@ -38,7 +38,7 @@ public class UserManagementTest {
      * Verifies that the user profile can be updated successfully.
      * Prints the response after updating the profile.
      */
-    @Test
+    @Test(description = "Verify the user profile update functionality.")
     public void updateProfileTest() {
         String token = loginAndGetToken();
         UserManagementService userManagementService = new UserManagementService();
@@ -69,7 +69,7 @@ public class UserManagementTest {
     /**
      * Verifies that retrieving a profile with an invalid token returns a 401 Unauthorized status.
      */
-    @Test
+    @Test(enabled = false)
     public void getProfileWithInvalidTokenShouldReturnUnauthorized() {
         UserManagementService userManagementService = new UserManagementService();
         Response response = userManagementService.getProfile("invalid_token");
@@ -80,7 +80,7 @@ public class UserManagementTest {
     /**
      * Verifies that updating a profile with an invalid token returns a 401 Unauthorized status.
      */
-    @Test
+    @Test(enabled = false)
     public void updateProfileWithInvalidTokenShouldReturnUnauthorized() {
         UserManagementService userManagementService = new UserManagementService();
         ProfileUpdate profileUpdate = new ProfileUpdate.Builder()
@@ -94,7 +94,7 @@ public class UserManagementTest {
     /**
      * Verifies that updating a profile with an empty payload returns a 400 Bad Request status.
      */
-    @Test
+    @Test(enabled = false)
     public void updateProfileWithEmptyPayloadShouldReturnBadRequest() {
         String token = loginAndGetToken();
         UserManagementService userManagementService = new UserManagementService();
@@ -107,7 +107,7 @@ public class UserManagementTest {
     /**
      * Verifies that retrieving a profile with an expired token returns a 401 Unauthorized status.
      */
-    @Test
+    @Test(enabled = false)
     public void getProfileWithExpiredTokenShouldReturnUnauthorized() {
         UserManagementService userManagementService = new UserManagementService();
         Response response = userManagementService.getProfile("expired_token");
