@@ -1,0 +1,493 @@
+2025-08-14 22:21:00 [main] INFO  org.api.listeners.TestListener - Test Suite Started!!!
+2025-08-14 22:21:01 [main] INFO  org.api.listeners.TestListener - ************************************************************************
+2025-08-14 22:21:01 [main] INFO  org.api.listeners.TestListener - createAccountTest is Started!!!
+2025-08-14 22:21:01 [main] INFO  org.api.listeners.TestListener - Description: Verify the account creation functionality.
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Request Method:POST
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Request URI:http://64.227.160.186:8080/api/auth/signup
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Request Header:Accept=*/*
+Content-Type=application/json
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Request PayLoad:{"username":"edwardo.stamm","password":"s1bd8u4miu4","email":"shon.hoppe@gmail.com","firstName":"Ervin","lastName":"Reinger","mobileNumber":"961.562.2152"}
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - STATUS CODE:500
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Response Header :Vary=Origin
+Vary=Access-Control-Request-Method
+Vary=Access-Control-Request-Headers
+Access-Control-Allow-Origin=https://swift.techwithjatin.com
+Access-Control-Allow-Methods=GET, POST, PUT, DELETE, OPTIONS
+Access-Control-Max-Age=3600
+Access-Control-Allow-Headers=Authorization, Content-Type, Accept
+Access-Control-Allow-Credentials=true
+X-Content-Type-Options=nosniff
+X-XSS-Protection=0
+Cache-Control=no-cache, no-store, max-age=0, must-revalidate
+Pragma=no-cache
+Expires=0
+X-Frame-Options=DENY
+Content-Type=application/json
+Transfer-Encoding=chunked
+Date=Thu, 14 Aug 2025 16:51:01 GMT
+Connection=close
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Response Body:{
+    "timestamp": "2025-08-14 16:51:01",
+    "status": 500,
+    "error": "System Error",
+    "message": "An unexpected error occurred",
+    "path": "uri=/api/auth/signup",
+    "solution": "Please try again later or contact support",
+    "errorCode": "SYS_001"
+}
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Response Time:168ms
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Response Status Line:HTTP/1.1 500 
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Response Content Type:application/json
+2025-08-14 22:21:01 [main] ERROR org.api.listeners.TestListener - createAccountTest is Failed!!!
+2025-08-14 22:21:01 [main] INFO  org.api.listeners.TestListener - ************************************************************************
+2025-08-14 22:21:01 [main] INFO  org.api.listeners.TestListener - forgotPasswordTest is Started!!!
+2025-08-14 22:21:01 [main] INFO  org.api.listeners.TestListener - Description: Verify if forgot password API is working.
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Request Method:POST
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Request URI:http://64.227.160.186:8080/api/auth/forgot-password
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Request Header:Accept=*/*
+Content-Type=application/json
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Request PayLoad:{"email":"Test.tset1342@gmail.com"}
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - STATUS CODE:500
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Response Header :Vary=Origin
+Vary=Access-Control-Request-Method
+Vary=Access-Control-Request-Headers
+Access-Control-Allow-Origin=https://swift.techwithjatin.com
+Access-Control-Allow-Methods=GET, POST, PUT, DELETE, OPTIONS
+Access-Control-Max-Age=3600
+Access-Control-Allow-Headers=Authorization, Content-Type, Accept
+Access-Control-Allow-Credentials=true
+X-Content-Type-Options=nosniff
+X-XSS-Protection=0
+Cache-Control=no-cache, no-store, max-age=0, must-revalidate
+Pragma=no-cache
+Expires=0
+X-Frame-Options=DENY
+Content-Type=application/json
+Transfer-Encoding=chunked
+Date=Thu, 14 Aug 2025 16:51:01 GMT
+Connection=close
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Response Body:{
+    "timestamp": "2025-08-14 16:51:01",
+    "status": 500,
+    "error": "System Error",
+    "message": "An unexpected error occurred",
+    "path": "uri=/api/auth/forgot-password",
+    "solution": "Please try again later or contact support",
+    "errorCode": "SYS_001"
+}
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Response Time:28ms
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Response Status Line:HTTP/1.1 500 
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Response Content Type:application/json
+2025-08-14 22:21:01 [main] INFO  org.api.tests.AuthTest - Received response for forgot password: {
+    "timestamp": "2025-08-14 16:51:01",
+    "status": 500,
+    "error": "System Error",
+    "message": "An unexpected error occurred",
+    "path": "uri=/api/auth/forgot-password",
+    "solution": "Please try again later or contact support",
+    "errorCode": "SYS_001"
+}
+2025-08-14 22:21:01 [main] ERROR org.api.listeners.TestListener - forgotPasswordTest is Failed!!!
+2025-08-14 22:21:01 [main] INFO  org.api.listeners.TestListener - ************************************************************************
+2025-08-14 22:21:01 [main] INFO  org.api.listeners.TestListener - loginTest is Started!!!
+2025-08-14 22:21:01 [main] INFO  org.api.listeners.TestListener - Description: Verify if login API is working.
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Request Method:POST
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Request URI:http://64.227.160.186:8080/api/auth/login
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Request Header:Accept=*/*
+Content-Type=application/json
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Request PayLoad:{"username":"ranga.gowda","password":"Gowda@890131"}
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - STATUS CODE:200
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Response Header :Vary=Origin
+Vary=Access-Control-Request-Method
+Vary=Access-Control-Request-Headers
+Access-Control-Allow-Origin=https://swift.techwithjatin.com
+Access-Control-Allow-Methods=GET, POST, PUT, DELETE, OPTIONS
+Access-Control-Max-Age=3600
+Access-Control-Allow-Headers=Authorization, Content-Type, Accept
+Access-Control-Allow-Credentials=true
+X-Content-Type-Options=nosniff
+X-XSS-Protection=0
+Cache-Control=no-cache, no-store, max-age=0, must-revalidate
+Pragma=no-cache
+Expires=0
+X-Frame-Options=DENY
+Content-Type=application/json
+Transfer-Encoding=chunked
+Date=Thu, 14 Aug 2025 16:51:01 GMT
+Keep-Alive=timeout=60
+Connection=keep-alive
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Response Body:{
+    "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYW5nYS5nb3dkYSIsImlhdCI6MTc1NTE5MDI2MSwiZXhwIjoxNzU1MTkzODYxfQ.8O--zolczD5UemalKMzgvNfMZaQXH6B466cdQy7ZQSo",
+    "type": "Bearer",
+    "id": 242,
+    "username": "ranga.gowda",
+    "email": "rangegowda8901@gmail.com",
+    "roles": [
+        "ROLE_USER"
+    ]
+}
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Response Time:108ms
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Response Status Line:HTTP/1.1 200 
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Response Content Type:application/json
+2025-08-14 22:21:01 [main] INFO  org.api.listeners.TestListener - loginTest is Passed!!!
+2025-08-14 22:21:01 [main] INFO  org.api.listeners.TestListener - ************************************************************************
+2025-08-14 22:21:01 [main] INFO  org.api.listeners.TestListener - getProfileTest is Started!!!
+2025-08-14 22:21:01 [main] INFO  org.api.listeners.TestListener - Description: 
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Request Method:POST
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Request URI:http://64.227.160.186:8080/api/auth/login
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Request Header:Accept=*/*
+Content-Type=application/json
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Request PayLoad:{"username":"ranga.gowda","password":"Gowda@890131"}
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - STATUS CODE:200
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Response Header :Vary=Origin
+Vary=Access-Control-Request-Method
+Vary=Access-Control-Request-Headers
+Access-Control-Allow-Origin=https://swift.techwithjatin.com
+Access-Control-Allow-Methods=GET, POST, PUT, DELETE, OPTIONS
+Access-Control-Max-Age=3600
+Access-Control-Allow-Headers=Authorization, Content-Type, Accept
+Access-Control-Allow-Credentials=true
+X-Content-Type-Options=nosniff
+X-XSS-Protection=0
+Cache-Control=no-cache, no-store, max-age=0, must-revalidate
+Pragma=no-cache
+Expires=0
+X-Frame-Options=DENY
+Content-Type=application/json
+Transfer-Encoding=chunked
+Date=Thu, 14 Aug 2025 16:51:02 GMT
+Keep-Alive=timeout=60
+Connection=keep-alive
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Response Body:{
+    "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYW5nYS5nb3dkYSIsImlhdCI6MTc1NTE5MDI2MiwiZXhwIjoxNzU1MTkzODYyfQ.zhLQwVOm18nhQqGP8jIeCqPPsM-mIzHE133cx6fFN8g",
+    "type": "Bearer",
+    "id": 242,
+    "username": "ranga.gowda",
+    "email": "rangegowda8901@gmail.com",
+    "roles": [
+        "ROLE_USER"
+    ]
+}
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Response Time:104ms
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Response Status Line:HTTP/1.1 200 
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Response Content Type:application/json
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Request Method:GET
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Request URI:http://64.227.160.186:8080/api/users/profile
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Request Header:Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYW5nYS5nb3dkYSIsImlhdCI6MTc1NTE5MDI2MiwiZXhwIjoxNzU1MTkzODYyfQ.zhLQwVOm18nhQqGP8jIeCqPPsM-mIzHE133cx6fFN8g
+Accept=*/*
+Content-Type=application/json
+2025-08-14 22:21:01 [main] INFO  org.api.filters.LoggerFilter - Request PayLoad:No Body
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - STATUS CODE:200
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Header :Vary=Origin
+Vary=Access-Control-Request-Method
+Vary=Access-Control-Request-Headers
+Access-Control-Allow-Origin=https://swift.techwithjatin.com
+Access-Control-Allow-Methods=GET, POST, PUT, DELETE, OPTIONS
+Access-Control-Max-Age=3600
+Access-Control-Allow-Headers=Authorization, Content-Type, Accept
+Access-Control-Allow-Credentials=true
+X-Content-Type-Options=nosniff
+X-XSS-Protection=0
+Cache-Control=no-cache, no-store, max-age=0, must-revalidate
+Pragma=no-cache
+Expires=0
+X-Frame-Options=DENY
+Content-Type=application/json
+Transfer-Encoding=chunked
+Date=Thu, 14 Aug 2025 16:51:02 GMT
+Keep-Alive=timeout=60
+Connection=keep-alive
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Body:{
+    "id": 242,
+    "username": "ranga.gowda",
+    "email": "rangegowda8901@gmail.com",
+    "firstName": "Ranga",
+    "lastName": "Gowda",
+    "mobileNumber": "9886044405"
+}
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Time:34ms
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Status Line:HTTP/1.1 200 
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Content Type:application/json
+2025-08-14 22:21:02 [main] INFO  org.api.listeners.TestListener - getProfileTest is Passed!!!
+2025-08-14 22:21:02 [main] INFO  org.api.listeners.TestListener - ************************************************************************
+2025-08-14 22:21:02 [main] INFO  org.api.listeners.TestListener - getProfileWithExpiredTokenShouldReturnUnauthorized is Started!!!
+2025-08-14 22:21:02 [main] INFO  org.api.listeners.TestListener - Description: 
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Request Method:GET
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Request URI:http://64.227.160.186:8080/api/users/profile
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Request Header:Authorization=Bearer expired_token
+Accept=*/*
+Content-Type=application/json
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Request PayLoad:No Body
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - STATUS CODE:500
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Header :Vary=Origin
+Vary=Access-Control-Request-Method
+Vary=Access-Control-Request-Headers
+Access-Control-Allow-Origin=https://swift.techwithjatin.com
+Access-Control-Allow-Methods=GET, POST, PUT, DELETE, OPTIONS
+Access-Control-Max-Age=3600
+Access-Control-Allow-Headers=Authorization, Content-Type, Accept
+Access-Control-Allow-Credentials=true
+X-Content-Type-Options=nosniff
+X-XSS-Protection=0
+Cache-Control=no-cache, no-store, max-age=0, must-revalidate
+Pragma=no-cache
+Expires=0
+X-Frame-Options=DENY
+Content-Type=application/json
+Transfer-Encoding=chunked
+Date=Thu, 14 Aug 2025 16:51:02 GMT
+Connection=close
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Body:{
+    "timestamp": "2025-08-14 16:51:02",
+    "status": 500,
+    "error": "System Error",
+    "message": "An unexpected error occurred",
+    "path": "uri=/api/users/profile",
+    "solution": "Please try again later or contact support",
+    "errorCode": "SYS_001"
+}
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Time:18ms
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Status Line:HTTP/1.1 500 
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Content Type:application/json
+2025-08-14 22:21:02 [main] ERROR org.api.listeners.TestListener - getProfileWithExpiredTokenShouldReturnUnauthorized is Failed!!!
+2025-08-14 22:21:02 [main] INFO  org.api.listeners.TestListener - ************************************************************************
+2025-08-14 22:21:02 [main] INFO  org.api.listeners.TestListener - getProfileWithInvalidTokenShouldReturnUnauthorized is Started!!!
+2025-08-14 22:21:02 [main] INFO  org.api.listeners.TestListener - Description: 
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Request Method:GET
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Request URI:http://64.227.160.186:8080/api/users/profile
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Request Header:Authorization=Bearer invalid_token
+Accept=*/*
+Content-Type=application/json
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Request PayLoad:No Body
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - STATUS CODE:500
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Header :Vary=Origin
+Vary=Access-Control-Request-Method
+Vary=Access-Control-Request-Headers
+Access-Control-Allow-Origin=https://swift.techwithjatin.com
+Access-Control-Allow-Methods=GET, POST, PUT, DELETE, OPTIONS
+Access-Control-Max-Age=3600
+Access-Control-Allow-Headers=Authorization, Content-Type, Accept
+Access-Control-Allow-Credentials=true
+X-Content-Type-Options=nosniff
+X-XSS-Protection=0
+Cache-Control=no-cache, no-store, max-age=0, must-revalidate
+Pragma=no-cache
+Expires=0
+X-Frame-Options=DENY
+Content-Type=application/json
+Transfer-Encoding=chunked
+Date=Thu, 14 Aug 2025 16:51:02 GMT
+Connection=close
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Body:{
+    "timestamp": "2025-08-14 16:51:02",
+    "status": 500,
+    "error": "System Error",
+    "message": "An unexpected error occurred",
+    "path": "uri=/api/users/profile",
+    "solution": "Please try again later or contact support",
+    "errorCode": "SYS_001"
+}
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Time:23ms
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Status Line:HTTP/1.1 500 
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Content Type:application/json
+2025-08-14 22:21:02 [main] ERROR org.api.listeners.TestListener - getProfileWithInvalidTokenShouldReturnUnauthorized is Failed!!!
+2025-08-14 22:21:02 [main] INFO  org.api.listeners.TestListener - ************************************************************************
+2025-08-14 22:21:02 [main] INFO  org.api.listeners.TestListener - updateProfileTest is Started!!!
+2025-08-14 22:21:02 [main] INFO  org.api.listeners.TestListener - Description: 
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Request Method:POST
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Request URI:http://64.227.160.186:8080/api/auth/login
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Request Header:Accept=*/*
+Content-Type=application/json
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Request PayLoad:{"username":"ranga.gowda","password":"Gowda@890131"}
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - STATUS CODE:200
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Header :Vary=Origin
+Vary=Access-Control-Request-Method
+Vary=Access-Control-Request-Headers
+Access-Control-Allow-Origin=https://swift.techwithjatin.com
+Access-Control-Allow-Methods=GET, POST, PUT, DELETE, OPTIONS
+Access-Control-Max-Age=3600
+Access-Control-Allow-Headers=Authorization, Content-Type, Accept
+Access-Control-Allow-Credentials=true
+X-Content-Type-Options=nosniff
+X-XSS-Protection=0
+Cache-Control=no-cache, no-store, max-age=0, must-revalidate
+Pragma=no-cache
+Expires=0
+X-Frame-Options=DENY
+Content-Type=application/json
+Transfer-Encoding=chunked
+Date=Thu, 14 Aug 2025 16:51:02 GMT
+Keep-Alive=timeout=60
+Connection=keep-alive
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Body:{
+    "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYW5nYS5nb3dkYSIsImlhdCI6MTc1NTE5MDI2MiwiZXhwIjoxNzU1MTkzODYyfQ.zhLQwVOm18nhQqGP8jIeCqPPsM-mIzHE133cx6fFN8g",
+    "type": "Bearer",
+    "id": 242,
+    "username": "ranga.gowda",
+    "email": "rangegowda8901@gmail.com",
+    "roles": [
+        "ROLE_USER"
+    ]
+}
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Time:103ms
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Status Line:HTTP/1.1 200 
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Content Type:application/json
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Request Method:PUT
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Request URI:http://64.227.160.186:8080/api/users/profile
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Request Header:Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYW5nYS5nb3dkYSIsImlhdCI6MTc1NTE5MDI2MiwiZXhwIjoxNzU1MTkzODYyfQ.zhLQwVOm18nhQqGP8jIeCqPPsM-mIzHE133cx6fFN8g
+Accept=*/*
+Content-Type=application/json
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Request PayLoad:{"firstName":null,"lastName":null,"email":null,"mobileNumber":"9844232432"}
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - STATUS CODE:500
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Header :Vary=Origin
+Vary=Access-Control-Request-Method
+Vary=Access-Control-Request-Headers
+Access-Control-Allow-Origin=https://swift.techwithjatin.com
+Access-Control-Allow-Methods=GET, POST, PUT, DELETE, OPTIONS
+Access-Control-Max-Age=3600
+Access-Control-Allow-Headers=Authorization, Content-Type, Accept
+Access-Control-Allow-Credentials=true
+X-Content-Type-Options=nosniff
+X-XSS-Protection=0
+Cache-Control=no-cache, no-store, max-age=0, must-revalidate
+Pragma=no-cache
+Expires=0
+X-Frame-Options=DENY
+Content-Type=application/json
+Transfer-Encoding=chunked
+Date=Thu, 14 Aug 2025 16:51:02 GMT
+Connection=close
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Body:{
+    "timestamp": "2025-08-14 16:51:02",
+    "status": 500,
+    "error": "System Error",
+    "message": "An unexpected error occurred",
+    "path": "uri=/api/users/profile",
+    "solution": "Please try again later or contact support",
+    "errorCode": "SYS_001"
+}
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Time:22ms
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Status Line:HTTP/1.1 500 
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Content Type:application/json
+2025-08-14 22:21:02 [main] INFO  org.api.listeners.TestListener - updateProfileTest is Passed!!!
+2025-08-14 22:21:02 [main] INFO  org.api.listeners.TestListener - ************************************************************************
+2025-08-14 22:21:02 [main] INFO  org.api.listeners.TestListener - updateProfileWithEmptyPayloadShouldReturnBadRequest is Started!!!
+2025-08-14 22:21:02 [main] INFO  org.api.listeners.TestListener - Description: 
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Request Method:POST
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Request URI:http://64.227.160.186:8080/api/auth/login
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Request Header:Accept=*/*
+Content-Type=application/json
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Request PayLoad:{"username":"ranga.gowda","password":"Gowda@890131"}
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - STATUS CODE:200
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Header :Vary=Origin
+Vary=Access-Control-Request-Method
+Vary=Access-Control-Request-Headers
+Access-Control-Allow-Origin=https://swift.techwithjatin.com
+Access-Control-Allow-Methods=GET, POST, PUT, DELETE, OPTIONS
+Access-Control-Max-Age=3600
+Access-Control-Allow-Headers=Authorization, Content-Type, Accept
+Access-Control-Allow-Credentials=true
+X-Content-Type-Options=nosniff
+X-XSS-Protection=0
+Cache-Control=no-cache, no-store, max-age=0, must-revalidate
+Pragma=no-cache
+Expires=0
+X-Frame-Options=DENY
+Content-Type=application/json
+Transfer-Encoding=chunked
+Date=Thu, 14 Aug 2025 16:51:02 GMT
+Keep-Alive=timeout=60
+Connection=keep-alive
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Body:{
+    "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYW5nYS5nb3dkYSIsImlhdCI6MTc1NTE5MDI2MiwiZXhwIjoxNzU1MTkzODYyfQ.zhLQwVOm18nhQqGP8jIeCqPPsM-mIzHE133cx6fFN8g",
+    "type": "Bearer",
+    "id": 242,
+    "username": "ranga.gowda",
+    "email": "rangegowda8901@gmail.com",
+    "roles": [
+        "ROLE_USER"
+    ]
+}
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Time:103ms
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Status Line:HTTP/1.1 200 
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Content Type:application/json
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Request Method:PUT
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Request URI:http://64.227.160.186:8080/api/users/profile
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Request Header:Authorization=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYW5nYS5nb3dkYSIsImlhdCI6MTc1NTE5MDI2MiwiZXhwIjoxNzU1MTkzODYyfQ.zhLQwVOm18nhQqGP8jIeCqPPsM-mIzHE133cx6fFN8g
+Accept=*/*
+Content-Type=application/json
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Request PayLoad:{"firstName":null,"lastName":null,"email":null,"mobileNumber":null}
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - STATUS CODE:500
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Header :Vary=Origin
+Vary=Access-Control-Request-Method
+Vary=Access-Control-Request-Headers
+Access-Control-Allow-Origin=https://swift.techwithjatin.com
+Access-Control-Allow-Methods=GET, POST, PUT, DELETE, OPTIONS
+Access-Control-Max-Age=3600
+Access-Control-Allow-Headers=Authorization, Content-Type, Accept
+Access-Control-Allow-Credentials=true
+X-Content-Type-Options=nosniff
+X-XSS-Protection=0
+Cache-Control=no-cache, no-store, max-age=0, must-revalidate
+Pragma=no-cache
+Expires=0
+X-Frame-Options=DENY
+Content-Type=application/json
+Transfer-Encoding=chunked
+Date=Thu, 14 Aug 2025 16:51:02 GMT
+Connection=close
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Body:{
+    "timestamp": "2025-08-14 16:51:02",
+    "status": 500,
+    "error": "System Error",
+    "message": "An unexpected error occurred",
+    "path": "uri=/api/users/profile",
+    "solution": "Please try again later or contact support",
+    "errorCode": "SYS_001"
+}
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Time:19ms
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Status Line:HTTP/1.1 500 
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Content Type:application/json
+2025-08-14 22:21:02 [main] ERROR org.api.listeners.TestListener - updateProfileWithEmptyPayloadShouldReturnBadRequest is Failed!!!
+2025-08-14 22:21:02 [main] INFO  org.api.listeners.TestListener - ************************************************************************
+2025-08-14 22:21:02 [main] INFO  org.api.listeners.TestListener - updateProfileWithInvalidTokenShouldReturnUnauthorized is Started!!!
+2025-08-14 22:21:02 [main] INFO  org.api.listeners.TestListener - Description: 
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Request Method:PUT
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Request URI:http://64.227.160.186:8080/api/users/profile
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Request Header:Authorization=Bearer invalid_token
+Accept=*/*
+Content-Type=application/json
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Request PayLoad:{"firstName":null,"lastName":null,"email":null,"mobileNumber":"1234567890"}
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - STATUS CODE:500
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Header :Vary=Origin
+Vary=Access-Control-Request-Method
+Vary=Access-Control-Request-Headers
+Access-Control-Allow-Origin=https://swift.techwithjatin.com
+Access-Control-Allow-Methods=GET, POST, PUT, DELETE, OPTIONS
+Access-Control-Max-Age=3600
+Access-Control-Allow-Headers=Authorization, Content-Type, Accept
+Access-Control-Allow-Credentials=true
+X-Content-Type-Options=nosniff
+X-XSS-Protection=0
+Cache-Control=no-cache, no-store, max-age=0, must-revalidate
+Pragma=no-cache
+Expires=0
+X-Frame-Options=DENY
+Content-Type=application/json
+Transfer-Encoding=chunked
+Date=Thu, 14 Aug 2025 16:51:02 GMT
+Connection=close
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Body:{
+    "timestamp": "2025-08-14 16:51:02",
+    "status": 500,
+    "error": "System Error",
+    "message": "An unexpected error occurred",
+    "path": "uri=/api/users/profile",
+    "solution": "Please try again later or contact support",
+    "errorCode": "SYS_001"
+}
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Time:19ms
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Status Line:HTTP/1.1 500 
+2025-08-14 22:21:02 [main] INFO  org.api.filters.LoggerFilter - Response Content Type:application/json
+2025-08-14 22:21:02 [main] ERROR org.api.listeners.TestListener - updateProfileWithInvalidTokenShouldReturnUnauthorized is Failed!!!
+2025-08-14 22:21:02 [main] INFO  org.api.listeners.TestListener - Test Suite Completed!!!
