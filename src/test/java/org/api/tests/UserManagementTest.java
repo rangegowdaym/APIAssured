@@ -69,7 +69,7 @@ public class UserManagementTest {
     /**
      * Verifies that retrieving a profile with an invalid token returns a 401 Unauthorized status.
      */
-    @Test(enabled = false)
+    @Test(description = "Verify retrieving profile with invalid token should return Unauthorized")
     public void getProfileWithInvalidTokenShouldReturnUnauthorized() {
         UserManagementService userManagementService = new UserManagementService();
         Response response = userManagementService.getProfile("invalid_token");
@@ -80,7 +80,7 @@ public class UserManagementTest {
     /**
      * Verifies that updating a profile with an invalid token returns a 401 Unauthorized status.
      */
-    @Test(enabled = false)
+    @Test(description = "Verify updating profile with invalid token should return Unauthorized")
     public void updateProfileWithInvalidTokenShouldReturnUnauthorized() {
         UserManagementService userManagementService = new UserManagementService();
         ProfileUpdate profileUpdate = new ProfileUpdate.Builder()
@@ -94,7 +94,7 @@ public class UserManagementTest {
     /**
      * Verifies that updating a profile with an empty payload returns a 400 Bad Request status.
      */
-    @Test(enabled = false)
+    @Test(description = "Verify updating profile with empty payload should return Bad Request")
     public void updateProfileWithEmptyPayloadShouldReturnBadRequest() {
         String token = loginAndGetToken();
         UserManagementService userManagementService = new UserManagementService();
@@ -107,7 +107,7 @@ public class UserManagementTest {
     /**
      * Verifies that retrieving a profile with an expired token returns a 401 Unauthorized status.
      */
-    @Test(enabled = false)
+    @Test(description = "Verify retrieving profile with expired token should return Unauthorized")
     public void getProfileWithExpiredTokenShouldReturnUnauthorized() {
         UserManagementService userManagementService = new UserManagementService();
         Response response = userManagementService.getProfile("expired_token");
