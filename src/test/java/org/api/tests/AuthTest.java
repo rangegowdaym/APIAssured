@@ -1,6 +1,7 @@
 package org.api.tests;
 
 import com.github.javafaker.Faker;
+import io.qameta.allure.*;
 import io.restassured.response.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -18,6 +19,8 @@ import org.testng.annotations.Test;
  * Test class for authentication-related API endpoints.
  * This class contains test cases for account creation, login, and forgot password functionalities.
  */
+@Epic("Authentication")
+@Feature("Auth Service")
 @Listeners(TestListener.class)
 public class AuthTest {
     private static final Logger logger = LogManager.getLogger(AuthTest.class);
@@ -37,6 +40,9 @@ public class AuthTest {
      * It asserts that the response status code is 200 and the response message matches the expected value.
      */
     @Test(description = "Verify the account creation functionality.")
+    @Story("Create Account")
+    @Description("This test case verifies that a new user account can be created successfully using the SignUp API.")
+    @Severity(SeverityLevel.BLOCKER)
     public void createAccountTest() {
         Faker faker = Faker.instance();
         SignUpRequest signUpRequest = new SignUpRequest.SignUpBuilder()
@@ -59,6 +65,9 @@ public class AuthTest {
      * It asserts that the response status code is 200, the token is not null, and the email matches the expected value.
      */
     @Test(description = "Verify if login API is working.")
+    @Story("User Login")
+    @Description("This test case verifies that a user can log in successfully using the Login API.")
+    @Severity(SeverityLevel.CRITICAL)
     public void loginTest() {
         LoginRequest loginRequest = new LoginRequest.Builder()
                 .username("ranga.gowda")
@@ -79,6 +88,9 @@ public class AuthTest {
      * It asserts that the response status code is 200.
      */
     @Test(description = "Verify if forgot password API is working.")
+    @Story("Forgot Password")
+    @Description("This test case verifies that the forgot password functionality works correctly.")
+    @Severity(SeverityLevel.NORMAL)
     public void forgotPasswordTest() {
         Response response = authService.forgotPassword("Test.tset1342@gmail.com");
         logger.info("Received response for forgot password: " + response.asPrettyString());
