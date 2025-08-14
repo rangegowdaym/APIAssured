@@ -4,6 +4,7 @@ import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import org.api.filters.LoggerFilter;
 
 /**
  * BaseService class provides utility methods for API interactions.
@@ -11,11 +12,15 @@ import io.restassured.specification.RequestSpecification;
  */
 public class BaseService {
 
-    private static final String BASE_URI = "https://swift.techwithjatin.com/";
+    private static final String BASE_URI = "http://64.227.160.186:8080";
     private static final String AUTHORIZATION_HEADER = "Authorization";
     private static final String BEARER_PREFIX = "Bearer ";
 
     protected final RequestSpecification requestSpecification;
+
+    static {
+        RestAssured.filters(new LoggerFilter());
+    }
 
     /**
      * Initializes the BaseService with a pre-configured RequestSpecification.
@@ -23,7 +28,7 @@ public class BaseService {
     public BaseService() {
         this.requestSpecification = RestAssured.given()
                 .baseUri(BASE_URI)
-                .contentType(ContentType.JSON); // Default Content-Type is JSON
+                .contentType(ContentType.JSON);
     }
 
     /**
@@ -70,6 +75,7 @@ public class BaseService {
      */
     protected Response putRequest(Object payload, String endPoint) {
         return requestSpecification
+                .contentType(ContentType.JSON)
                 .body(payload)
                 .put(endPoint);
     }

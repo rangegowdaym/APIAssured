@@ -1,6 +1,7 @@
 package org.api.tests;
 
 import io.restassured.response.Response;
+import org.api.listeners.TestListener;
 import org.api.models.request.LoginRequest;
 import org.api.models.request.ProfileUpdate;
 import org.api.models.response.LoginResponse;
@@ -8,12 +9,14 @@ import org.api.models.response.UserProfileResponse;
 import org.api.services.AuthService;
 import org.api.services.UserManagementService;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 /**
  * Test class for user management functionality.
  * Contains tests for retrieving and updating user profiles.
  */
+@Listeners(TestListener.class)
 public class UserManagementTest {
 
     /**

@@ -2,19 +2,25 @@ package org.api.tests;
 
 import com.github.javafaker.Faker;
 import io.restassured.response.Response;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.api.listeners.TestListener;
 import org.api.models.request.LoginRequest;
 import org.api.models.request.SignUpRequest;
 import org.api.models.response.LoginResponse;
 import org.api.services.AuthService;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 /**
  * Test class for authentication-related API endpoints.
  * This class contains test cases for account creation, login, and forgot password functionalities.
  */
+@Listeners(TestListener.class)
 public class AuthTest {
+    private static final Logger logger = LogManager.getLogger(AuthTest.class);
     private AuthService authService;
 
     /**
@@ -57,7 +63,9 @@ public class AuthTest {
         LoginRequest loginRequest = new LoginRequest.Builder()
                 .username("ranga.gowda")
                 .password("Gowda@890131").build();
+
         Response response = authService.login(loginRequest);
+
         LoginResponse loginResponse = response.as(LoginResponse.class);
 
         Assert.assertEquals(response.getStatusCode(), 200);
@@ -73,8 +81,9 @@ public class AuthTest {
     @Test(description = "Verify if forgot password API is working.")
     public void forgotPasswordTest() {
         Response response = authService.forgotPassword("Test.tset1342@gmail.com");
+        logger.info("Received response for forgot password: " + response.asPrettyString());
         System.out.println(response.asPrettyString());
         Assert.assertEquals(response.getStatusCode(), 200);
-        // Assert.assertEquals(loginResponse.getEmail(), "rangegowda8901@gmail.com");
+        logger.info("Forgot password test completed successfully.");
     }
 }
