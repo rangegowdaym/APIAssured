@@ -1,5 +1,6 @@
 package org.api.services;
 
+import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -20,6 +21,7 @@ public class BaseService {
 
     static {
         RestAssured.filters(new LoggerFilter());
+        RestAssured.filters(new AllureRestAssured());
     }
 
     /**
