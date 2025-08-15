@@ -2,9 +2,9 @@ name: API Automation Test
 
 on:
   push:
-    branches: [ main ]
+    branches: [ dev ]
   pull_request:
-    branches: [ main ]
+    branches: [ dev ]
   schedule:
     - cron: "00 20 * * *"
 
@@ -47,8 +47,8 @@ jobs:
         if: always()
         continue-on-error: true
         with:
-          ref: gh-pages
-          path: gh-pages
+          ref: dev
+          path: dev
 
       - name: Generate Allure Report
         uses: simple-elf/allure-report-action@v1.11
@@ -59,8 +59,8 @@ jobs:
 
       - name: Publish Allure Report
         if: always()
-        uses: peaceiris/actions-gh-pages@v4.0.0
+        uses: peaceiris/actions-dev@v4.0.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
+          publish_branch: dev
           publish_dir: allure-history
