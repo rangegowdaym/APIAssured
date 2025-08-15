@@ -78,7 +78,7 @@ public class UserManagementTest {
     /**
      * Verifies that retrieving a profile with an invalid token returns a 401 Unauthorized status.
      */
-    @Test(description = "Verify retrieving profile with invalid token should return Unauthorized", enabled = false)
+    @Test(description = "Verify retrieving profile with invalid token should return Unauthorized")
     @Severity(SeverityLevel.CRITICAL)
     @Story("Get User Profile with Invalid Token")
     @Description("This test case verifies that retrieving a user profile with an invalid token returns a 401 Unauthorized status.")
@@ -92,7 +92,7 @@ public class UserManagementTest {
     /**
      * Verifies that updating a profile with an invalid token returns a 401 Unauthorized status.
      */
-    @Test(description = "Verify updating profile with invalid token should return Unauthorized", enabled = false)
+    @Test(description = "Verify updating profile with invalid token should return Unauthorized")
     @Severity(SeverityLevel.CRITICAL)
     @Story("Update User Profile with Invalid Token")
     @Description("This test case verifies that updating a user profile with an invalid token returns a 401 Unauthorized status.")
@@ -109,7 +109,7 @@ public class UserManagementTest {
     /**
      * Verifies that updating a profile with an empty payload returns a 400 Bad Request status.
      */
-    @Test(description = "Verify updating profile with empty payload should return Bad Request", enabled = false)
+    @Test(description = "Verify updating profile with empty payload should return Bad Request")
     @Severity(SeverityLevel.NORMAL)
     @Story("Update User Profile with Empty Payload")
     @Description("This test case verifies that updating a user profile with an empty payload returns a 400 Bad Request status.")
@@ -125,7 +125,7 @@ public class UserManagementTest {
     /**
      * Verifies that retrieving a profile with an expired token returns a 401 Unauthorized status.
      */
-    @Test(description = "Verify retrieving profile with expired token should return Unauthorized", enabled = false)
+    @Test(description = "Verify retrieving profile with expired token should return Unauthorized")
     @Severity(SeverityLevel.CRITICAL)
     @Story("Get User Profile with Expired Token")
     @Description("This test case verifies that retrieving a user profile with an expired token returns a 401 Unauthorized status.")
