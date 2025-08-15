@@ -42,7 +42,7 @@ jobs:
       - name: Publish test report
         if: always()
         uses: peaceiris/actions-gh-pages@v3
-        env:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: allure-history
