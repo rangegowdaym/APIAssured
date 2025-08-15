@@ -1,0 +1,51 @@
+2025-08-15 11:15:37 [main] INFO  org.api.listeners.TestListener - Test Suite Started!!!
+2025-08-15 11:15:38 [main] INFO  org.api.listeners.TestListener - ************************************************************************
+2025-08-15 11:15:38 [main] INFO  org.api.listeners.TestListener - forgotPasswordTest is Started!!!
+2025-08-15 11:15:38 [main] INFO  org.api.listeners.TestListener - Description: Verify if forgot password API is working.
+2025-08-15 11:15:39 [main] INFO  org.api.filters.LoggerFilter - Request Method:POST
+2025-08-15 11:15:39 [main] INFO  org.api.filters.LoggerFilter - Request URI:http://64.227.160.186:8080/api/auth/forgot-password
+2025-08-15 11:15:39 [main] INFO  org.api.filters.LoggerFilter - Request Header:Accept=*/*
+Content-Type=application/json
+2025-08-15 11:15:39 [main] INFO  org.api.filters.LoggerFilter - Request PayLoad:{"email":"Test.tset1342@gmail.com"}
+2025-08-15 11:15:39 [main] INFO  org.api.filters.LoggerFilter - STATUS CODE:500
+2025-08-15 11:15:39 [main] INFO  org.api.filters.LoggerFilter - Response Header :Vary=Origin
+Vary=Access-Control-Request-Method
+Vary=Access-Control-Request-Headers
+Access-Control-Allow-Origin=https://swift.techwithjatin.com
+Access-Control-Allow-Methods=GET, POST, PUT, DELETE, OPTIONS
+Access-Control-Max-Age=3600
+Access-Control-Allow-Headers=Authorization, Content-Type, Accept
+Access-Control-Allow-Credentials=true
+X-Content-Type-Options=nosniff
+X-XSS-Protection=0
+Cache-Control=no-cache, no-store, max-age=0, must-revalidate
+Pragma=no-cache
+Expires=0
+X-Frame-Options=DENY
+Content-Type=application/json
+Transfer-Encoding=chunked
+Date=Fri, 15 Aug 2025 05:46:15 GMT
+Connection=close
+2025-08-15 11:15:39 [main] INFO  org.api.filters.LoggerFilter - Response Body:{
+    "timestamp": "2025-08-15 05:46:15",
+    "status": 500,
+    "error": "System Error",
+    "message": "An unexpected error occurred",
+    "path": "uri=/api/auth/forgot-password",
+    "solution": "Please try again later or contact support",
+    "errorCode": "SYS_001"
+}
+2025-08-15 11:15:39 [main] INFO  org.api.filters.LoggerFilter - Response Time:407ms
+2025-08-15 11:15:39 [main] INFO  org.api.filters.LoggerFilter - Response Status Line:HTTP/1.1 500 
+2025-08-15 11:15:39 [main] INFO  org.api.filters.LoggerFilter - Response Content Type:application/json
+2025-08-15 11:15:39 [main] INFO  org.api.tests.AuthTest - Received response for forgot password: {
+    "timestamp": "2025-08-15 05:46:15",
+    "status": 500,
+    "error": "System Error",
+    "message": "An unexpected error occurred",
+    "path": "uri=/api/auth/forgot-password",
+    "solution": "Please try again later or contact support",
+    "errorCode": "SYS_001"
+}
+2025-08-15 11:15:39 [main] ERROR org.api.listeners.TestListener - forgotPasswordTest is Failed!!!
+2025-08-15 11:15:39 [main] INFO  org.api.listeners.TestListener - Test Suite Completed!!!
