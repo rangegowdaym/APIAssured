@@ -41,7 +41,7 @@ jobs:
           name: TestNG Results
           path: target/surefire-reports/junitreports/TEST-*xml
           reporter: java-junit
-
+          
       - name: Setup Allure History
         uses: actions/checkout@v4.2.2
         if: always()
@@ -64,3 +64,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: allure-history
+
+      
+      - name: Clean allure-history git history
+          run: rm -rf allure-history/.git || true
