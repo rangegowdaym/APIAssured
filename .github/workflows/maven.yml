@@ -64,7 +64,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: allure-history
-
-      
-      - name: Clean allure-history git history
-          run: rm -rf allure-history/.git || true
